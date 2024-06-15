@@ -43,7 +43,6 @@ export const TodoContainer = () => {
 
     const filteredTodos = todos.filter(todo => {
         if (filter === 'completed') {
-            window.location.reload();
             return todo.completed;
         }
         if (filter === 'active') return !todo.completed;
