@@ -23,6 +23,7 @@ function TodoForm({ addTodo }) {
     return (
         <form className="flex flex-col gap-2 items-center" onSubmit={handleSubmit}>
             <input
+                autocomplete=off
                 id='todo'
                 type="text"
                 value={task}
