@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
 function TodoEditForm({ editTask, task }) {
     const [value, setValue] = useState(task.task);
@@ -17,7 +18,7 @@ function TodoEditForm({ editTask, task }) {
                 placeholder="Edit todo"
                 className='rounded-md pl-2 w-[60%] focus:shadow-green-400'
             />
-            <button type="submit" className='bg-green-400 hover:bg-green-600 hover:text-white rounded-md pl-2 pr-2'>Update Todo</button>
+            <IoMdCheckmarkCircleOutline className=' cursor-pointer text-2xl' onClick={handleSubmit} color='blue' />
         </form>
     );
 };
