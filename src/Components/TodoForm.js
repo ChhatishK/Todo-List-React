@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 function TodoForm({ addTodo }) {
     const [task, setTask] = useState('');
 
+   const todo = document.getElementById("todo")
     const handleSubmit = e => {
         e.preventDefault();
         if (task !== ''){
@@ -11,10 +12,13 @@ function TodoForm({ addTodo }) {
                 setTask('');
             }
         } else {
-            const todo = document.getElementById("todo")
             todo.style.boxShadow = '0.5px 0.5px 0.5px 1px red'
         }
     };
+    
+    document.body.addEventListener("click", () =>{
+        todo.style.boxShadow = 'none';
+    })
 
     return (
         <form className="flex flex-col gap-2 items-center" onSubmit={handleSubmit}>
